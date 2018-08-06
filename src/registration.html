@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://unpkg.com/superagent/superagent.js"></script>
+</head>
+<body>
+
+    <div id="registration">
+        <input type="text" id="name"> <br>
+        <input type="text" id="phone"> <br>
+        <input type="text" id="email"> <br>
+        <input type="text" id="password"> <br>
+        <button id="submit" onclick="register()">send</button>
+    </div>
+
+    <script>
+
+        function register() {
+            alert('alert!');
+
+            var url = 'http://localhost:8080/cinema/user/register';
+            var user = {
+                name: document.getElementById('name').value,
+                phone: document.getElementById('phone').value,
+                email: document.getElementById('email').value,
+                password: document.getElementById('password').value
+            };
+
+
+            superagent
+                .post(url)
+                .send(user)
+                .end(function (err, res) {
+                    if (err || !res.ok) {
+                        console.log(err);
+                        console.log(res);
+                    } else {
+                        console.log('ok');
+                        console.log(res.body);
+                    }
+                });
+        }
+    </script>
+
+
+</body>
+</html>

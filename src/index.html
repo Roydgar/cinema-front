@@ -1,0 +1,32 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="js/movie-list.js"></script>
+
+</head>
+<body>
+
+    <div class="container">
+        <div class="well well-sm">
+            <strong>Choose Day</strong>
+            <div class="btn-group">
+                <a href="#" id="day-1" class="btn btn-default btn-md" onclick="getMoviesByDay1()"></a>
+                <a href="#" id="day-2" class="btn btn-default btn-md" onclick="getMoviesByDay2()"></a>
+                <a href="#" id="day-3" class="btn btn-default btn-md" onclick="getMoviesByDay3()"></a>
+                <a href="#" id="day-4" class="btn btn-default btn-md" onclick="getMoviesByDay4()"></a>
+                <a href="#" id="day-5" class="btn btn-default btn-md" onclick="getMoviesByDay5()"></a>
+                <a href="#" id="day-6" class="btn btn-default btn-md" onclick="getMoviesByDay6()"></a>
+            </div>
+        </div>
+        <div id="movies" class="row list-group">
+        </div>
+    </div>
+
+</body>
+</html>
